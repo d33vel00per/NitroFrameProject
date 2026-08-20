@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NitroFrame — SaaS background</title>
+<style>
+:root { background:#030405; color:#fff; }
+*{box-sizing:border-box} html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#030405}
+body{font-family:Inter,Arial,sans-serif;display:grid;place-items:center}
+.scene{position:relative;width:100vw;height:100vh;isolation:isolate;background:#050505}
+.scene:before{content:"";position:absolute;inset:0;opacity:.12;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse at center,#000 0%,transparent 68%);z-index:-1}
+.glow{position:absolute;width:42vw;height:42vw;max-width:600px;max-height:600px;left:50%;top:50%;transform:translate(-50%,-50%);border-radius:50%;background:transparent;filter:none;animation:none}
+.orbit{position:absolute;left:50%;top:50%;width:min(78vw,980px);height:min(32vw,400px);transform:translate(-50%,-50%) rotate(-12deg);border:1px solid rgba(255,255,255,.09);border-radius:50%;filter:none;animation:drift 16s ease-in-out infinite}
+.orbit.two{width:min(65vw,820px);height:min(25vw,300px);transform:translate(-50%,-50%) rotate(18deg);border-color:rgba(255,255,255,.045);animation-duration:21s;animation-direction:reverse}
+.infinity{position:absolute;left:50%;top:50%;width:min(58vw,720px);height:min(24vw,290px);transform:translate(-50%,-50%);opacity:.62;filter:none;animation:float 9s ease-in-out infinite}
+.infinity path{fill:none;stroke:url(#line);stroke-width:1.1;stroke-linecap:round;stroke-dasharray:8 18;animation:dash 13s linear infinite}
+.dot{position:absolute;width:4px;height:4px;border-radius:50%;background:#ffffff;box-shadow:0 0 6px 1px rgba(255,255,255,.3);animation:travel 8s linear infinite}
+.dot.a{left:18%;top:42%}.dot.b{left:77%;top:56%;animation-delay:-3s;animation-duration:11s}.dot.c{left:36%;top:25%;animation-delay:-6s;animation-duration:14s}
+.brand-logo{position:absolute;left:50%;top:50%;width:min(86vw,1250px);max-height:420px;object-fit:contain;transform:translate(-50%,-50%);z-index:3;filter:none;animation:logoFloat 9s ease-in-out infinite}.logo-safe{position:absolute;left:50%;top:50%;width:min(45vw,560px);height:clamp(100px,18vw,190px);transform:translate(-50%,-50%);border-radius:50%;background:transparent;z-index:2}
+@keyframes logoFloat{50%{transform:translate(-50%,-50%) scale(1.012)}}@keyframes drift{50%{transform:translate(-50%,-50%) rotate(-6deg) scale(1.035)}}@keyframes float{50%{transform:translate(-50%,-50%) scale(1.025) rotate(2deg)}}@keyframes dash{to{stroke-dashoffset:-260}}@keyframes travel{0%,100%{transform:translate(0,0);opacity:.2}50%{transform:translate(10vw,-3vh);opacity:1}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important}}
+</style>
+</head>
+<body><main class="scene" aria-label="Minimal animated SaaS background for NitroFrame">
+<div class="glow"></div><div class="orbit"></div><div class="orbit two"></div>
+<svg class="infinity" viewBox="0 0 720 290" aria-hidden="true"><defs><linearGradient id="line" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff" stop-opacity=".08"/><stop offset=".5" stop-color="#ffffff"/><stop offset="1" stop-color="#fff" stop-opacity=".08"/></linearGradient></defs><path d="M55 145 C120 35 220 35 360 145 C500 255 600 255 665 145 C600 35 500 35 360 145 C220 255 120 255 55 145Z"/></svg>
+<div class="dot a"></div><div class="dot b"></div><div class="dot c"></div><div class="logo-safe"></div><img class="brand-logo" src="nitroframe_logo_4x.png" alt="NitroFrame">
+</main></body></html>
