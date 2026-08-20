@@ -6,7 +6,7 @@ NitroFrame — настольное приложение для тех, кто �
 
 Это не ещё один тяжёлый комбайн, который требует привыкания. NitroFrame сделан как спокойный рабочий инструмент: открываешь, выбираешь нужное и продолжаешь работу.
 
-![NitroFrame](../NitroFrameInstaller/Assets/reference-poster.jpg)
+![NitroFrame](reference-poster.jpg)
 
 ## Что внутри
 
