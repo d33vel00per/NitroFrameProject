@@ -64,16 +64,16 @@ NitroFrame — Windows-приложение для системной и игр�
 
 <table>
 <tr>
-<td width="50%"><img src="assets/screen-1.jpg" alt="Главная страница NitroFrame"></td>
-<td width="50%"><img src="assets/screen-2.jpg" alt="Страница оптимизации NitroFrame"></td>
+<td width="50%"><img src="assets/screen-1.png" alt="Главная страница NitroFrame"></td>
+<td width="50%"><img src="assets/screen-2.png" alt="Страница оптимизации NitroFrame"></td>
 </tr>
 <tr>
 <td align="center"><sub>Главная — быстрый обзор состояния</sub></td>
 <td align="center"><sub>Оптимизация — группы настроек и восстановление</sub></td>
 </tr>
 <tr>
-<td width="50%"><img src="assets/screen-3.jpg" alt="Мониторинг производительности NitroFrame"></td>
-<td width="50%"><img src="assets/screen-4.jpg" alt="Инструменты NitroFrame"></td>
+<td width="50%"><img src="assets/screen-3.png" alt="Мониторинг производительности NitroFrame"></td>
+<td width="50%"><img src="assets/screen-4.png" alt="Инструменты NitroFrame"></td>
 </tr>
 <tr>
 <td align="center"><sub>Производительность — CPU, GPU, RAM и VRAM</sub></td>
