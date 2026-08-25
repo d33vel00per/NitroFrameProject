@@ -1,0 +1,76 @@
+# Build results
+bin/
+obj/
+EXE/
+*.user
+*.suo
+*.rsuser
+*.userosscache
+*.sln.docstates
+*_wpftmp.csproj
+.vs/
+.vscode/
+
+# Archives / build outputs
+*.rar
+*.zip
+*.7z
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Tooling / temp
+.security-skill-review/
+
+# Old project artifacts
+NitroFrame/app.build
+NitroFrame/app.dist
+*.log
+npm-shrinkwrap.json
+.env.local
+graphify-out/
+NitroFrameCS/graphify-out/
+NitroFrameInstaller/Build/
+NitroFrameInstaller/Payload/
+NitroFrameUpdater/publish/
+tools/dotnet-ef/.store/
+*.pdb
+
+NitroFrame.Server/graphify-out/
+NitroFrame.Server/*.db
+NitroFrame.Server/*.db-shm
+NitroFrame.Server/*.db-wal
+NitroFrameCS/Publish/site-client/
+NitroFrame.Server/
+NitroFrameCS/
+NitroFrameInstaller/
+NitroFrameProject/
+NitroFrameUpdater/
+deploy/
+installer/
+tools/
+EXE/
+db/
+graphify-out/
+*.db
+*.db-shm
+*.db-wal
+*.exe
+*.pdb
+.env
+server.log
+node_modules/
+
+# Repo keeps only release-facing files
+NitroFrameCS/
+NitroFrame.Server/
+NitroFrameInstaller/
+NitroFrameUpdater/
+tools/
+deploy/
+installer/
+_deploy_*.py
+build-release.py
