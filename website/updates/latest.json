@@ -1,7 +1,7 @@
 {
-  "Version": "2.1.18",
-  "Url": "https://github.com/d33vel00per/NitroFrameProject/releases/download/v2.1.18/NitroFrameInstaller.exe",
-  "Sha256": "2A7330E88B6D30086C8083177DC26DD8B720AF86B85D57A01E74A0DAA09F169A",
+  "Version": "2.1.19",
+  "Url": "https://github.com/d33vel00per/NitroFrameProject/releases/download/v2.1.19/NitroFrameInstaller.exe",
+  "Sha256": "1BE923473AC52B66268F6A4361FAC06B0FABDE98376AF485019C4F2442A36742",
   "Mandatory": false,
-  "Notes": "Игровые профили: GTA V, CS2, PUBG, Rust — свои процессы, цвета и советы; настройка цветов интерфейса; смена профиля на лету; исправления лаунчера и статусов."
+  "Notes": "Steam-интеграция: автопоиск Steam, путь в настройках, оптимизация открывает библиотеку Steam для CS2, PUBG и Rust. Плюс всё из 2.1.18: игровые профили, цвета интерфейса, смена профиля на лету."
 }
