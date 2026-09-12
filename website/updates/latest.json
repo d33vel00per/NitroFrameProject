@@ -1,7 +1,7 @@
 {
-  "Version": "2.1.19",
-  "Url": "https://github.com/d33vel00per/NitroFrameProject/releases/download/v2.1.19/NitroFrameInstaller.exe",
-  "Sha256": "1BE923473AC52B66268F6A4361FAC06B0FABDE98376AF485019C4F2442A36742",
+  "Version": "2.1.20",
+  "Url": "https://github.com/d33vel00per/NitroFrameProject/releases/download/v2.1.20/NitroFrameInstaller.exe",
+  "Sha256": "C9F1B95D99C538216860BEF25B4E376CF64C461C78290E6879F27E153FAD9609",
   "Mandatory": false,
-  "Notes": "Steam-интеграция: автопоиск Steam, путь в настройках, оптимизация открывает библиотеку Steam для CS2, PUBG и Rust. Плюс всё из 2.1.18: игровые профили, цвета интерфейса, смена профиля на лету."
+  "Notes": "Вход по коду из письма: при регистрации приходит 6-значный код, ввёл — и сразу вошёл. Регистрация открыта для всех. В админке: KPI-панель платежей и экспорт промокодов в CSV."
 }
