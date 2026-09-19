@@ -1,7 +1,7 @@
 {
-  "Version": "2.1.21",
-  "Url": "https://github.com/d33vel00per/NitroFrameProject/releases/download/v2.1.21/NitroFrameInstaller.exe",
-  "Sha256": "D56FA088DA7E5722746A86B09A55F722F9F4AD3061C5079D9647FCB4926402B8",
+  "Version": "2.1.22",
+  "Url": "https://github.com/d33vel00per/NitroFrameProject/releases/download/v2.1.22/NitroFrameInstaller.exe",
+  "Sha256": "09BA5A4159D729FBDA2BC8BB214DD2548BFF0BDCBA6FE9E13C4FDE5CDE705156",
   "Mandatory": false,
-  "Notes": "PUBG: починили применение качества разрешения — больше не роняет игру при применении. CS2: чистка памяти больше не вызывает фризы. Экспериментальные твики помечены предупреждением."
+  "Notes": "Новая иконография: навигация и системные иконки в едином минималистичном стиле. Починены четыре иконки, которые не отображались (админ-панель, «О программе»)."
 }
