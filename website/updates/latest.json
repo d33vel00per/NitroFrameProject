@@ -1,7 +1,7 @@
 {
-  "Version": "2.1.22",
-  "Url": "https://github.com/d33vel00per/NitroFrameProject/releases/download/v2.1.22/NitroFrameInstaller.exe",
-  "Sha256": "09BA5A4159D729FBDA2BC8BB214DD2548BFF0BDCBA6FE9E13C4FDE5CDE705156",
+  "Version": "2.1.23",
+  "Url": "https://github.com/d33vel00per/NitroFrameProject/releases/download/v2.1.23/NitroFrameInstaller.exe",
+  "Sha256": "3F127776CAEBABEB8D1A7A5D0E20C1C5235C70FA623AE21795F09035768D4381",
   "Mandatory": false,
-  "Notes": "Новая иконография и обновлённая страница «Инструменты»: обслуживание системы в одной карточке с живыми показателями. Живые карточки ЦП/ГП/ОЗУ на главной, аккуратная подсветка выбранного профиля игры. Починены четыре иконки, которые не отображались."
+  "Notes": "Бот в Telegram стал информативнее: меню с кнопками и наглядные ответы о статусе. Панель администратора: глобальный поиск, сброс HWID, сегменты рассылок, график выручки, журнал аудита, экспорт в CSV. Исправлено отображение триальных грантов."
 }
