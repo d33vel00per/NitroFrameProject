@@ -1,7 +1,7 @@
 {
-  "Version": "2.1.23",
-  "Url": "https://github.com/d33vel00per/NitroFrameProject/releases/download/v2.1.23/NitroFrameInstaller.exe",
-  "Sha256": "3F127776CAEBABEB8D1A7A5D0E20C1C5235C70FA623AE21795F09035768D4381",
+  "Version": "2.1.24",
+  "Url": "https://github.com/d33vel00per/NitroFrameProject/releases/download/v2.1.24/NitroFrameInstaller.exe",
+  "Sha256": "F49D630F78C026BF31F8D7025618E7FAB70BE08534CD1A6F091F0EA16A0B6BE0",
   "Mandatory": false,
-  "Notes": "Бот в Telegram стал информативнее: меню с кнопками и фирменные стикеры в ответах. Панель администратора: глобальный поиск, сброс HWID, сегменты рассылок, график выручки, журнал аудита, экспорт в CSV. Исправлено отображение триальных грантов."
+  "Notes": "Исправлено отключение от сервера при подключении с включённой оптимизацией на GTA V (RAGE MP — Majestic, GTA5RP): античит видел вмешательство в систему и рвал соединение. Для профиля GTA больше не отключаются службы, которые проверяют античиты RP-серверов (PcaSvc, DiagTrack, SysMain), буст игры стал только системным, очистка памяти при запуске игры не запускается — осталась вручную на странице «Обслуживание». Оптимизация CS2, PUBG и Rust не изменилась."
 }
