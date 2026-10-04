@@ -177,7 +177,8 @@ public partial class MainWindow : Window
 
         try
         {
-            var dialog = new PaymentDialog(intent, _app.Licensing.License)
+            var dialog = new PaymentDialog(intent, _app.Licensing.License,
+                onCancel: _app.Licensing.CancelPendingPayment)
             {
                 Owner = this,
                 ShowInTaskbar = true,

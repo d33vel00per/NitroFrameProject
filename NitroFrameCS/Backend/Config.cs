@@ -270,10 +270,16 @@ public static partial class Config
             // (на части систем режет FPS, на других добавляет), универсального
             // совета не существует; после инцидента с CS2 решено не предлагать
             // вовсе — человек переключает её в настройках Windows сам.
+            // FlipNoVsync исключён для профиля GTA с 2026-10-04: отключение
+            // VSync на уровне Direct3D даёт мигание/тиринг в оконном режиме
+            // GTA V (Majestic), откат — только после перезагрузки (HKLM).
+            // Для остальных профилей остаётся по умолчанию.
             new(Hive.HKLM, @"SOFTWARE\Microsoft\Direct3D", "FlipNoVsync", 1, ValueType.DWORD,
-                Loc.T("Отключение принудительной синхронизации кадров Direct3D (VSync)"), Loc.T("Графика и DirectX")),
+                Loc.T("Отключение принудительной синхронизации кадров Direct3D (VSync)"), Loc.T("Графика и DirectX"),
+                ExcludeProfiles: ["gta"]),
             new(Hive.HKLM, @"SOFTWARE\WOW6432Node\Microsoft\Direct3D", "FlipNoVsync", 1, ValueType.DWORD,
-                Loc.T("Отключение принудительной синхронизации кадров Direct3D (32-битные приложения)"), Loc.T("Графика и DirectX")),
+                Loc.T("Отключение принудительной синхронизации кадров Direct3D (32-битные приложения)"), Loc.T("Графика и DirectX"),
+                ExcludeProfiles: ["gta"]),
 
             // Сеть
             new(Hive.HKLM, @"SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile", "NetworkThrottlingIndex", unchecked((int)0xFFFFFFFF), ValueType.DWORD,

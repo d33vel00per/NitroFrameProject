@@ -61,23 +61,45 @@ public partial class LicenseViewModel : ObservableObject
                 ? string.Format(Loc.T("Осталось дней: {0}"), TrialRemainingText)
                 : Loc.T("Подписка не активна");
 
-    // Сколько осталось до конца периода (для заполнения полосы).
-    // Полоса начинается заполненной на 100% и «тает» к концу срока.
-    // У paid-подписки мы не храним точный старт — считаем от типичной
-    // длительности tier'а (30/90 дней). У trial — от TrialDays.
-    public double ProgressFraction
+    // Сколько осталось до конца периода (0..1) — внутренняя доля для свечения.
+    public double ProgressFraction => RemainingFraction();
+
+    // Полоса на главной всегда заполнена на 100%, пока подписка жива
+    // (на паузе — приглушённым цветом через триггер IsFrozen в XAML).
+    // Тает только свечение блика, см. GlowOpacity.
+    public double BarFill
     {
         get
         {
+            if (IsFrozen) return 1;
+            if (!(IsPaid || IsTrial)) return 0;
             var end = _license.ExpiresAtLocal;
             if (end is null) return 0;
-            var totalDays = IsTrial ? Config.TrialDays : (TierDurationDays());
-            if (totalDays <= 0) totalDays = 30;
-            var left = end.Value - DateTimeOffset.Now;
-            if (left <= TimeSpan.Zero) return 0;        // истекла — полоса пуста
-            var f = left.TotalDays / totalDays;
-            return f < 0 ? 0 : f > 1 ? 1 : f;
+            return end.Value > DateTimeOffset.Now ? 1 : 0;
         }
+    }
+
+    // Яркость блика на полосе: 1 при полном сроке → 0 к концу срока.
+    // Дни уменьшаются — свечение гаснет, а сама полоса остаётся заполненной.
+    public double GlowOpacity
+    {
+        get
+        {
+            if (IsFrozen) return 0;
+            return RemainingFraction();
+        }
+    }
+
+    private double RemainingFraction()
+    {
+        var end = _license.ExpiresAtLocal;
+        if (end is null) return 0;
+        var totalDays = IsTrial ? Config.TrialDays : (TierDurationDays());
+        if (totalDays <= 0) totalDays = 30;
+        var left = end.Value - DateTimeOffset.Now;
+        if (left <= TimeSpan.Zero) return 0;        // истекла — свечения нет
+        var f = left.TotalDays / totalDays;
+        return f < 0 ? 0 : f > 1 ? 1 : f;
     }
 
     private int TierDurationDays() => _license.Tier switch
@@ -473,6 +495,8 @@ public partial class LicenseViewModel : ObservableObject
         OnPropertyChanged(nameof(PlanLabel));
         OnPropertyChanged(nameof(RemainingText));
         OnPropertyChanged(nameof(ProgressFraction));
+        OnPropertyChanged(nameof(BarFill));
+        OnPropertyChanged(nameof(GlowOpacity));
         OnPropertyChanged(nameof(IsFrozen));
         OnPropertyChanged(nameof(FrozenUntil));
         OnPropertyChanged(nameof(FreezesRemaining));
@@ -480,6 +504,15 @@ public partial class LicenseViewModel : ObservableObject
         OnPropertyChanged(nameof(FreezeRemainingText));
         OnPropertyChanged(nameof(FreezeShortText));
         LicenseChanged?.Invoke();
+    }
+
+    // Отмена незавершённого платежа из окна оплаты: останавливаем опрос
+    // статуса, чтобы он не висел в фоне 10 минут после закрытого окна.
+    // Следующая «Оплатить» создаст новый счёт как обычно.
+    public void CancelPendingPayment()
+    {
+        _pendingPayment = null;
+        _pollTimer.Stop();
     }
 
     public void Shutdown() => _pollTimer.Stop();
